@@ -1,0 +1,23 @@
+<svg width="500" height="150" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Горы -->
+  <path d="M20 120 L70 60 L110 100 L140 70 L180 120 Z" fill="#6e6e6e"></path>
+  <path d="M70 60 L90 80 L110 100 L140 70 L150 90 L180 120" fill="#a0a0a0"></path>
+
+  <!-- Солнце за горами -->
+  <circle cx="90" cy="60" r="20" fill="#FFD700" fill-opacity="0.85"></circle>
+
+  <!-- Текст -->
+  <text x="200" y="80" font-family="Georgia, serif" font-size="36" fill="#FFD700" font-weight="bold">
+    Свет Легенд
+  </text>
+
+  <!-- Орнамент под текстом -->
+  <g transform="translate(200,100)" stroke="#FFD700" stroke-width="2">
+    <line x1="0" y1="10" x2="20" y2="0"></line>
+    <line x1="20" y1="0" x2="40" y2="10"></line>
+    <line x1="40" y1="10" x2="60" y2="0"></line>
+    <line x1="60" y1="0" x2="80" y2="10"></line>
+    <line x1="80" y1="10" x2="100" y2="0"></line>
+    <line x1="100" y1="0" x2="120" y2="10"></line>
+  </g>
+</svg>

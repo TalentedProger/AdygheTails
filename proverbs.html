@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пословицы - Свет легенд</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt="Логотип проекта" width="180" height="auto" loading="lazy">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="library.html" class="nav-link">Библиотека</a>
+                </li>
+                <li class="nav-item">
+                    <a href="proverbs.html" class="nav-link active">Пословицы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="songs.html" class="nav-link">Песни</a>
+                </li>
+                <li class="nav-item">
+                    <a href="legends.html" class="nav-link">Легенды</a>
+                </li>
+                <li class="nav-item">
+                    <a href="myths.html" class="nav-link">Мифы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quest.html" class="nav-link">Квест</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="proverbs-hero">
+        <div class="hero-image">
+            <div class="hero-content-wrapper">
+                <div class="hero-info">
+                    <h1 class="hero-title">Народная мудрость</h1>
+                    <p class="hero-description">Откройте для себя сокровищницу народной мудрости - пословицы и поговорки, которые веками передавались из поколения в поколение, неся в себе глубокие истины о жизни, человеческой природе и мироустройстве.</p>
+                    <div class="hero-stats">
+                        <span>50+ пословиц</span>
+                        <span>•</span>
+                        <span>2 языка</span>
+                    </div>
+                </div>
+                <div class="hero-artist">
+                    <img src="./images/photo1.png" alt="Народная мудрость" class="artist-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proverbs Section -->
+    <section class="proverbs-section">
+        <div class="container">
+            <h2 class="section-title">Сокровища народной мудрости</h2>
+            
+            <div class="proverbs-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Емыджагъэм ш1эныгъэр и1эзэгъу</h3>
+                        <h4 class="proverb-translation">Для неграмотного знание - лекарство</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Емыджагъэм ш1эныгъэр и1эзэгъу')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Жъыр къыздик1ырэм ощхри къек1ы</h3>
+                        <h4 class="proverb-translation">Откуда ветер, оттуда и дождь</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Жъыр къыздик1ырэм ощхри къек1ы')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Зы акъыл нахьи акъылит1у</h3>
+                        <h4 class="proverb-translation">Одна голова - хорошо, а две лучше</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Зы акъыл нахьи акъылит1у')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Зышъхьэ мыузыгъэм уишъхьэуз фэмы1уат</h3>
+                        <h4 class="proverb-translation">Тому у кого голова не болела, о своей головной боли не рассказывай</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Зышъхьэ мыузыгъэм уишъхьэуз фэмы1уат')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Зэмызэгъ зэрылъ унагъор тхьамык1агъу</h3>
+                        <h4 class="proverb-translation">Горе семье где нет согласия</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Зэмызэгъ зэрылъ унагъор тхьамык1агъу')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Зэдашхэ 1эшу,зэдэлажьэ тхьагъо</h3>
+                        <h4 class="proverb-translation">Вместе есть - вкуснее, вместе трудиться - радость</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Зэдашхэ 1эшу,зэдэлажьэ тхьагъо')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Къыпфаем зыфэмыгъэин</h3>
+                        <h4 class="proverb-translation">С тем, кто в тебе нуждается, не будь высокомерным</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Къыпфаем зыфэмыгъэин')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Мак1эу 1о, бэу ш1э</h3>
+                        <h4 class="proverb-translation">Мало говори, много делай</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Мак1эу 1о, бэу ш1э')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Мазрэ ш1унк1ырэ уищъэф ащымы1уат</h3>
+                        <h4 class="proverb-translation">В лесу и в темноте не рассказывай своей тайны</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Мазрэ ш1унк1ырэ уищъэф ащымы1уат')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Мэхъуоныгъэр к1ымафэ хъотыр зыщымыгъупщэжь</h3>
+                        <h4 class="proverb-translation">Во время сенокоса о зимних бурях не забывай</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Мэхъуоныгъэр к1ымафэ хъотыр зыщымыгъупщэжь')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Нафэ мыхъужьын шъэф щы1эп</h3>
+                        <h4 class="proverb-translation">Нет ничего тайного, что не станет явью</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Нафэ мыхъужьын шъэф щы1эп')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Нахьыжъхэм шъхьак1афэ афэзымыш1ырэм шъхьак1афэ тефэрэп</h3>
+                        <h4 class="proverb-translation">Кто не уважает старших, сам не заслуживает уважения</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Нахьыжъхэм шъхьак1афэ афэзымыш1ырэм шъхьак1афэ тефэрэп')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">«Ныбгырищы аш1эрэр шъэфэп»</h3>
+                        <h4 class="proverb-translation">Тайна известная троим - уже не тайна</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'«Ныбгырищы аш1эрэр шъэфэп»')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Непкъым тетыр къош1офык1э 1аз</h3>
+                        <h4 class="proverb-translation">Стоящий на берегу - самый искусный гребец</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Непкъым тетыр къош1офык1э 1аз')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Тыдэ щы1эми ш1эныгъэм лъык1у</h3>
+                        <h4 class="proverb-translation">Где бы ты ни был - иди к знанию</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Тыдэ щы1эми ш1эныгъэм лъык1у')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">1эхъогъу зэдэзыштэмк1э тыгъужъыри щынагъоп</h3>
+                        <h4 class="proverb-translation">Для дружного стада волк не страшен</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'1эхъогъу зэдэзыштэмк1э тыгъужъыри щынагъоп')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Адыгэ хак1э пытапс1э ис</h3>
+                        <h4 class="proverb-translation">Адыгский гость словно в крепости сидит</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Адыгэ хак1э пытапс1э ис')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Акъыл зи1эм щэ1агъэ и1</h3>
+                        <h4 class="proverb-translation">Имеющий разум имеет выдержку</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Акъыл зи1эм щэ1агъэ и1')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Уи нэбджэгъу уи гъундж</h3>
+                        <h4 class="proverb-translation">Твой друг - твое зеркало</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Уи нэбджэгъу уи гъундж')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Акъылыр ц1ыфымк1э ят1онорэпс</h3>
+                        <h4 class="proverb-translation">Разум - вторая душа человека</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Акъылыр ц1ыфымк1э ят1онорэпс')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Бзэгур сэ ихъыгъ</h3>
+                        <h4 class="proverb-translation">Язык - что вынутый кинжал</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Бзэгур сэ ихъыгъ')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Блэк1ыгъэр зымыш1эрэм непэрэм уасэ фиш1ыщтэп</h3>
+                        <h4 class="proverb-translation">Прошлого не знающий, настоящему цены не поймет</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Блэк1ыгъэр зымыш1эрэм непэрэм уасэ фиш1ыщтэп')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Бэ зы1орэм нахьи бэ зыш1</h3>
+                        <h4 class="proverb-translation">Чем тот, кто много говорит, лучше тот, кто много делает</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Бэ зы1орэм нахьи бэ зыш1')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Бэ зыгъэш1агъэ нахьи бэ зылъэгъугъ</h3>
+                        <h4 class="proverb-translation">Чем долго прожить, лучше много повидать</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Бэ зыгъэш1агъэ нахьи бэ зылъэгъугъ')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Гум ик1асэр  нэм ш1одах</h3>
+                        <h4 class="proverb-translation">Приятное сердце прекрасно для глаз</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Гум ик1асэр  нэм ш1одах')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Гущы1э дахэм тамэ къыбгуегъак1э гащы1э 1фем узэхегъафэ</h3>
+                        <h4 class="proverb-translation">От доброго слова взлетишь как на крыльях, от злого слова - упадешь</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Гущы1э дахэм тамэ къыбгуегъак1э гащы1э 1фем узэхегъафэ')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Гущы1э пытэ зимы1эм шъыпкъагъэ и1эп</h3>
+                        <h4 class="proverb-translation">У кого нет твердого слова, тот не имеет правды</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Гущы1э пытэ зимы1эм шъыпкъагъэ и1эп')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Гъуч1 къалэ зи1эри гъуч1 мастэ щэк1э</h3>
+                        <h4 class="proverb-translation">Владелец железной крепости нуждается в железной иголке</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Гъуч1 къалэ зи1эри гъуч1 мастэ щэк1э')">📋 Скопировать</button>
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <div class="proverb-card">
+                        <h3 class="proverb-original">Делэм уемыупч1эу икъэбар къыуе1о</h3>
+                        <h4 class="proverb-translation">Дурак и когда его не спрашивают, о себе рассказывает</h4>
+                        <button class="copy-btn" onclick="copyProverb(event,'Делэм уемыупч1эу икъэбар къыуе1о')">📋 Скопировать</button>
+                    </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <!-- <li><a href="index.html">Главная</a></li> -->
+                        <li><a href="library.html">Библиотека</a></li>
+                        <li><a href="proverbs.html">Пословицы</a></li>
+                        <li><a href="songs.html">Песни</a></li>
+                        <li><a href="legends.html">Легенды</a></li>
+                        <li><a href="myths.html">Мифы</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="quest.html">Квест</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/AdygheTalesBot" class="social-link social-link--telegram" target="_blank">Telegram Bot</a>
+                        <a href="#" class="social-link social-link--vk">Вконтакте</a>
+                        <a href="#" class="social-link social-link--yt">YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-info">
+                        <a href="tel:+71234567890" type="tel" title="Позвонить" target="_blank">+7 (123) 456 78 90</a>
+                        <a href="mailto:educationtome01@gmail.com" type="mailto" title="Написать" target="_blank">info@svetlegend.ru</a>
+                        <a href="" target="_blank">Связаться в Telegram</a>
+                        <a href="" target="_blank">Связаться в WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">О проекте</h3>
+                    <div class="project-info">
+                        <p>Университет:<a href="https://mkgtu.ru" target="_blank" class="footer_links" alt="Перейти" title="Перейти">МГТУ</a></p>
+                        <p>Факультет: Народного Творчества</p>
+                        <p>Автор идеи:<a href="https://google.com" target="_blank" class="footer_links" alt="Связаться" title="Связаться">Фамилия Имя</a></p>
+                        <button class="support-btn">💚 Поддержать проект</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Свет легенд. Все права защищены.</p>
+
+                <div class="personal_info container">
+                  <h6><a href="https://github.com/TalentedProger">Created by © Salim Sokurov, 2025</a></h6>
+                </div>
+            </div>
+            <!-- <div class="personal_info container">
+			          <h6><a href="https://github.com/TalentedProger">2025 Свет легенд. Created by © Salim Sokurov, 2025</a></h6>
+		        </div> -->
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.proverbs-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                }
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+
+        // Copy function
+        // function copyProverb(text) {
+        //     navigator.clipboard.writeText(text).then(() => {
+        //         // Show success animation
+        //         const button = event.target;
+        //         const originalText = button.innerHTML;
+        //         button.innerHTML = '✅ Скопировано!';
+        //         button.style.background = 'var(--primary-green)';
+                
+        //         setTimeout(() => {
+        //             button.innerHTML = originalText;
+        //             button.style.background = '';
+        //         }, 2000);
+        //     }).catch(err => {
+        //         console.error('Ошибка копирования: ', err);
+        //     });
+        // }
+
+        function copyProverb(event, text) {
+    navigator.clipboard.writeText(text).then(() => {
+        const button = event.target;
+        const originalText = button.innerHTML;
+        button.innerHTML = '✅ Скопировано!';
+        button.style.background = 'var(--primary-green)';
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.style.background = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Ошибка копирования: ', err);
+    });
+}
+    </script>
+</body>
+</html>

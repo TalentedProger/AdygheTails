@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свет легенд</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="./index.html">
+          <img src="./images/logo.svg" alt="Логотип проекта" width="180" height="auto" loading="lazy">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a href="library.html" class="nav-link mobile">Библиотека</a>
+        </li>
+        <li class="nav-item">
+          <a href="proverbs.html" class="nav-link mobile">Пословицы</a>
+        </li>
+        <li class="nav-item">
+          <a href="songs.html" class="nav-link mobile">Песни</a>
+        </li>
+        <li class="nav-item">
+          <a href="legends.html" class="nav-link mobile">Легенды</a>
+        </li>
+        <li class="nav-item">
+          <a href="myths.html" class="nav-link mobile">Мифы</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link mobile">Галерея</a>
+        </li>
+        <li class="nav-item">
+          <a href="quest.html" class="nav-link mobile">Квест</a>
+        </li>
+      </ul>
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="video-container">
+      <video autoplay muted loop playsinline id="background-video">
+        <source src="./video/fon.mp4"
+          type="video/mp4">
+        <source src="./video/fon.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <!-- <div class="hero-content"> -->
+      <button class="hero-button" onclick="document.querySelector('.content').scrollIntoView({behavior: 'smooth'})">
+        Узнать больше
+      </button>
+    <!-- </div> -->
+  </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-card">
+          <h3>Библиотека</h3>
+          <p>Собрание древних текстов и современных исследований о культурном наследии.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./library.html">Перейти в раздел</a>          
+        </div>
+        <div class="content-card">
+          <h3>Пословицы</h3>
+          <p>Мудрость поколений в коротких изречениях и народных поговорках.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./proverbs.html">Перейти в раздел</a>
+        </div>
+        <div class="content-card">
+          <h3>Песни</h3>
+          <p>Музыкальное наследие народов мира и традиционные мелодии.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./songs.html">Перейти в раздел</a>
+        </div>
+        <div class="content-card">
+          <h3>Легенды</h3>
+          <p>Истории, передаваемые из поколения в поколение через устное творчество.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./legends.html">Перейти в раздел</a>
+        </div>
+        <div class="content-card">
+          <h3>Мифы</h3>
+          <p>Древние сказания о богах, духах и сотворении мира.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./myths.html">Перейти в раздел</a>
+        </div>
+        <div class="content-card">
+          <h3>Галерея</h3>
+          <p>Визуальное наследие: картины, фотографии и артефакты культуры.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./gallery.html">Перейти в раздел</a>
+        </div>
+        <div class="content-card">
+          <h3>Квесты</h3>
+          <p>Визуальное наследие: картины, фотографии и артефакты культуры.Собрание древних текстов и современных исследований о культурном наследии</p>
+          <a class="hero-btn primary hero-btn_main" href="./quest.html">Перейти в раздел</a>
+        </div>
+        <div class="content-card">
+           <h3>Telegram Bot</h3>
+          <p>Уникальная цифровая платформа в Telegram, которая познакомит вас с богатым культурным наследием черкесов</p>
+          <a class="hero-btn primary hero-btn_main" href="https://t.me/AdygheTalesBot" target="_blank">Перейти к чату</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <!-- <li><a href="index.html">Главная</a></li> -->
+                        <li><a href="library.html">Библиотека</a></li>
+                        <li><a href="proverbs.html">Пословицы</a></li>
+                        <li><a href="songs.html">Песни</a></li>
+                        <li><a href="legends.html">Легенды</a></li>
+                        <li><a href="myths.html">Мифы</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="quest.html">Квест</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/AdygheTalesBot" class="social-link social-link--telegram" target="_blank">Telegram Bot</a>
+                        <a href="#" class="social-link social-link--vk">Вконтакте</a>
+                        <a href="#" class="social-link social-link--yt">YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-info">
+                        <a href="tel:+71234567890" type="tel" title="Позвонить" target="_blank">+7 (123) 456 78 90</a>
+                        <a href="mailto:educationtome01@gmail.com" type="mailto" title="Написать" target="_blank">info@svetlegend.ru</a>
+                        <a href="" target="_blank">Связаться в Telegram</a>
+                        <a href="" target="_blank">Связаться в WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">О проекте</h3>
+                    <div class="project-info">
+                        <p>Университет:<a href="https://mkgtu.ru" target="_blank" class="footer_links" alt="Перейти" title="Перейти">МГТУ</a></p>
+                        <p>Факультет: Народного Творчества</p>
+                        <p>Автор идеи:<a href="https://google.com" target="_blank" class="footer_links" alt="Связаться" title="Связаться">Фамилия Имя</a></p>
+                        <button class="support-btn">💚 Поддержать проект</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Свет легенд. Все права защищены.</p>
+
+                <div class="personal_info container">
+                  <h6><a href="https://github.com/TalentedProger">Created by © Salim Sokurov, 2025</a></h6>
+                </div>
+            </div>
+            <!-- <div class="personal_info container">
+			          <h6><a href="https://github.com/TalentedProger">2025 Свет легенд. Created by © Salim Sokurov, 2025</a></h6>
+		        </div> -->
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест - Свет легенд</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="./index.html"><img src="./images/logo.svg" alt="Логотип проекта" width="180" height="auto" loading="lazy"></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="library.html" class="nav-link">Библиотека</a>
+                </li>
+                <li class="nav-item">
+                    <a href="proverbs.html" class="nav-link">Пословицы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="songs.html" class="nav-link">Песни</a>
+                </li>
+                <li class="nav-item">
+                    <a href="legends.html" class="nav-link">Легенды</a>
+                </li>
+                <li class="nav-item">
+                    <a href="myths.html" class="nav-link">Мифы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quest.html" class="nav-link active">Квест</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quest Hero Section -->
+    <section class="quest-hero">
+        <div class="hero-image">
+            <div class="hero-content-wrapper">
+                <div class="hero-info">
+                    <h1 class="hero-title">Викторины на знание культуры: интеллектуально и увлекательно!</h1>
+                    <div class="hero-buttons">
+                        <button class="hero-btn primary" onclick="document.querySelector('.quiz-selection').scrollIntoView({behavior: 'smooth'})">
+                            Выбрать квиз
+                        </button>
+                        <button class="hero-btn secondary" onclick="openInstructionsModal()">
+                            Как играть?
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-artist">
+                    <img src="./images/adyghe_man.png" alt="Квест викторина" class="artist-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructions Modal -->
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInstructionsModal()">&times;</span>
+            <h2 class="modal-title">Начать играть - просто</h2>
+            <div class="instructions-list">
+                <div class="instruction-item">
+                    <span class="instruction-number">#1</span>
+                    <div class="instruction-text">Выберите подходящий квиз из предложенных тем</div>
+                    <img src="./images/icons/search-address-book-svgrepo-com.svg" alt="Шаг 1" class="instruction-image">
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-number">#2</span>
+                    <div class="instruction-text">Ознакомьтесь с правилами и нажмите "Далее"</div>
+                    <img src="./images/icons/book.png" alt="Шаг 2" class="instruction-image">
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-number">#3</span>
+                    <div class="instruction-text">Отвечайте на вопросы, выбирая правильный вариант</div>
+                    <img src="./images/icons/answer-svgrepo-com.svg" alt="Шаг 3" class="instruction-image">
+                </div>
+                <div class="instruction-item">
+                    <span class="instruction-number">#4</span>
+                    <div class="instruction-text">Получите результат и мотивацию для дальнейшего изучения</div>
+                    <img src="./images/icons/achievement-reward-winner-svgrepo-com.svg" alt="Шаг 4" class="instruction-image">
+                </div>
+            </div>
+            <button class="modal-btn" onclick="closeInstructionsModal()">Все понятно ✅</button>
+        </div>
+    </div>
+
+    <!-- Quiz Selection Section -->
+    <section class="quiz-selection">
+        <div class="container">
+            <h2 class="section-title">Выберите тему</h2>
+
+            <div class="quiz-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Quiz 1: Славянская культура -->
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Славянская культура</h3>
+                            <p class="quiz-description">Проверьте свои знания о традициях, обычаях и мифологии славянских народов</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">10</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🟢</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Легкий</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('slavic')">Играть!</button>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 2: Народные песни -->
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Народные песни</h3>
+                            <p class="quiz-description">Узнайте, насколько хорошо вы знаете музыкальное наследие разных народов</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">12</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🟡</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Средний</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('songs')">Играть!</button>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 3: Мифология мира -->
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Мифология мира</h3>
+                            <p class="quiz-description">Сложные вопросы о мифах и легендах различных культур планеты</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">15</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🔴</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Тяжелый</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('mythology')">Играть!</button>
+                        </div>
+                    </div>
+
+ 
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Пословицы и поговорки</h3>
+                            <p class="quiz-description">Проверьте знание народной мудрости и крылатых выражений</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">8</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🟢</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Легкий</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('proverbs')">Играть!</button>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Искусство и галерея</h3>
+                            <p class="quiz-description">Вопросы о художниках, картинах и культурном наследии в искусстве</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">11</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🟡</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Средний</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('art')">Играть!</button>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Легенды народов</h3>
+                            <p class="quiz-description">Сложные вопросы о героических сказаниях и народных легендах</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">13</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🔴</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Тяжелый</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('./legends')">Играть!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <!-- <li><a href="index.html">Главная</a></li> -->
+                        <li><a href="library.html">Библиотека</a></li>
+                        <li><a href="proverbs.html">Пословицы</a></li>
+                        <li><a href="songs.html">Песни</a></li>
+                        <li><a href="legends.html">Легенды</a></li>
+                        <li><a href="myths.html">Мифы</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="quest.html">Квест</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/AdygheTalesBot" class="social-link social-link--telegram" target="_blank">Telegram Bot</a>
+                        <a href="#" class="social-link social-link--vk">Вконтакте</a>
+                        <a href="#" class="social-link social-link--yt">YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="contact-info">
+                        <a href="tel:+71234567890" type="tel" title="Позвонить" target="_blank">+7 (123) 456 78 90</a>
+                        <a href="mailto:educationtome01@gmail.com" type="mailto" title="Написать" target="_blank">info@svetlegend.ru</a>
+                        <a href="" target="_blank">Связаться в Telegram</a>
+                        <a href="" target="_blank">Связаться в WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">О проекте</h3>
+                    <div class="project-info">
+                        <p>Университет:<a href="https://mkgtu.ru" target="_blank" class="footer_links" alt="Перейти" title="Перейти">МГТУ</a></p>
+                        <p>Факультет: Народного Творчества</p>
+                        <p>Автор идеи:<a href="https://google.com" target="_blank" class="footer_links" alt="Связаться" title="Связаться">Фамилия Имя</a></p>
+                        <button class="support-btn">💚 Поддержать проект</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Свет легенд. Все права защищены.</p>
+
+                <div class="personal_info container">
+                  <h6><a href="https://github.com/TalentedProger">Created by © Salim Sokurov, 2025</a></h6>
+                </div>
+            </div>
+            <!-- <div class="personal_info container">
+			          <h6><a href="https://github.com/TalentedProger">2025 Свет легенд. Created by © Salim Sokurov, 2025</a></h6>
+		        </div> -->
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Instructions Modal Functions
+        function openInstructionsModal() {
+            document.getElementById('instructionsModal').style.display = 'block';
+        }
+
+        function closeInstructionsModal() {
+            document.getElementById('instructionsModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('instructionsModal');
+            if (event.target == modal) {
+                closeInstructionsModal();
+            }
+        }
+
+        // Start Quiz Function
+        function startQuiz(quizType) {
+            window.location.href = `quiz-${quizType}.html`;
+        }
+
+        // Initialize Quiz Swiper
+        const quizSwiper = new Swiper('.quiz-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

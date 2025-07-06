@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Песни - Свет легенд</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt="Логотип проекта" width="180" height="auto" loading="lazy">
+                </a>
+            </div>
+            <ul class="nav-menu custom-nav-start" id="custom-nav-start">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="library.html" class="nav-link">Библиотека</a>
+                </li>
+                <li class="nav-item">
+                    <a href="proverbs.html" class="nav-link">Пословицы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="songs.html" class="nav-link active">Песни</a>
+                </li>
+                <li class="nav-item">
+                    <a href="legends.html" class="nav-link">Легенды</a>
+                </li>
+                <li class="nav-item">
+                    <a href="myths.html" class="nav-link">Мифы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quest.html" class="nav-link">Квест</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="songs-hero">
+        <div class="hero-image">
+            <div class="hero-content-wrapper">
+                <div class="hero-info">
+                    <h1 class="hero-title">Адыгская музыка</h1>
+                    <p class="hero-description">Погрузитесь в удивительный мир традиционной адыгской музыки. Каждая мелодия несет в себе историю народа, его культуру и душу, передаваемую через поколения.</p>
+                    <div class="hero-stats">
+                        <span>12 песен</span>
+                        <span>•</span>
+                        <span>45 минут</span>
+                    </div>
+                </div>
+                <div class="hero-artist">
+                    <img src="./images/music-fon.png" alt="Адыгский исполнитель" class="artist-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music-section">
+        <div class="container">
+            <h2 class="section-title">Плейлист</h2>
+            
+            <div class="songs-list">
+                <div class="song-item" data-song="1">
+                    <span class="song-number">1</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Абрэдж Нухьэ иорэд</span>
+                    <span class="song-plays">1,245</span>
+                    <span class="song-duration">3:36</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="2">
+                    <span class="song-number">2</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Бэдынокъуэ нарт хасэм къокIуэ</span>
+                    <span class="song-plays">892</span>
+                    <span class="song-duration">4:15</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="3">
+                    <span class="song-number">3</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Вэгъэудзэ и уэрэд</span>
+                    <span class="song-plays">1,567</span>
+                    <span class="song-duration">2:56</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="4">
+                    <span class="song-number">4</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Гухэлъхэр</span>
+                    <span class="song-plays">2,134</span>
+                    <span class="song-duration">1:41</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="5">
+                    <span class="song-number">5</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Дзэлыкъуэ хъупlэ</span>
+                    <span class="song-plays">756</span>
+                    <span class="song-duration">2:30</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="6">
+                    <span class="song-number">6</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Загъэлъат</span>
+                    <span class="song-plays">1,023</span>
+                    <span class="song-duration">2:36</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="7">
+                    <span class="song-number">7</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Инарыкъуей къафэ</span>
+                    <span class="song-plays">1,456</span>
+                    <span class="song-duration">3:16</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="8">
+                    <span class="song-number">8</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Ислъамый</span>
+                    <span class="song-plays">2,345</span>
+                    <span class="song-duration">3:16</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="9">
+                    <span class="song-number">9</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Къэжыхь</span>
+                    <span class="song-plays">678</span>
+                    <span class="song-duration">2:01</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="10">
+                    <span class="song-number">10</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Къэрэкъамыл</span>
+                    <span class="song-plays">1,789</span>
+                    <span class="song-duration">2:12</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="11">
+                    <span class="song-number">11</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Лашын нартыжьхэм яхуэусэ</span>
+                    <span class="song-plays">1,934</span>
+                    <span class="song-duration">5:02</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+                
+                <div class="song-item" data-song="12">
+                    <span class="song-number">12</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Мамрыкъом иорэд</span>
+                    <span class="song-plays">3,812</span>
+                    <span class="song-duration">2:18</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="13">
+                    <span class="song-number">13</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Мерзейхэ я къафэ</span>
+                    <span class="song-plays">5,912</span>
+                    <span class="song-duration">2:24</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="14">
+                    <span class="song-number">14</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Мэзгуащ</span>
+                    <span class="song-plays">12,612</span>
+                    <span class="song-duration">2:27</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="15">
+                    <span class="song-number">15</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Нарт къафэ I</span>
+                    <span class="song-plays">5,512</span>
+                    <span class="song-duration">2:57</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="16">
+                    <span class="song-number">16</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Нарт къафэ II</span>
+                    <span class="song-plays">7,612</span>
+                    <span class="song-duration">1:36</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="17">
+                    <span class="song-number">17</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Нарт къашъу</span>
+                    <span class="song-plays">3,682</span>
+                    <span class="song-duration">2:23</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="18">
+                    <span class="song-number">18</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Пщымазытьэ</span>
+                    <span class="song-plays">5,612</span>
+                    <span class="song-duration">2:32</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="19">
+                    <span class="song-number">19</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Сосрыкъуэрэ</span>
+                    <span class="song-plays">2,312</span>
+                    <span class="song-duration">5:30</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="20">
+                    <span class="song-number">20</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Сэрмахуэ</span>
+                    <span class="song-plays">1,912</span>
+                    <span class="song-duration">2:29</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="21">
+                    <span class="song-number">21</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Хьагъэуджым изэфакlу</span>
+                    <span class="song-plays">3,412</span>
+                    <span class="song-duration">2:31</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="22">
+                    <span class="song-number">22</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Хьакулащ</span>
+                    <span class="song-plays">12,612</span>
+                    <span class="song-duration">2:59</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+
+                <div class="song-item" data-song="23">
+                    <span class="song-number">23</span>
+                    <img src="./images/galery_mus_photo.jpg" alt="Обложка" class="song-cover">
+                    <span class="song-title">Чэбэхъан изэфакlу</span>
+                    <span class="song-plays">1,412</span>
+                    <span class="song-duration">2:34</span>
+                    <button class="download-btn"></button>
+                    <button class="more-btn"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <div class="player-left">
+            <img src="./images/galery_mus_photo.jpg" alt="Текущая песня" class="current-song-cover">
+            <div class="current-song-info">
+                <span class="current-song-title">Выберите песню</span>
+            </div>
+            <button class="player-download-btn"></button>
+        </div>
+        
+        <div class="player-center">
+            <button class="control-btn shuffle-btn"></button>
+            <button class="control-btn prev-btn"></button>
+            <!-- <button class="control-btn play-pause-btn main-play"></button> -->
+            <button class="control-btn play-pause-btn main-play not-playing"></button>
+            <button class="control-btn next-btn"></button>
+            <button class="control-btn repeat-btn"></button>
+        </div>
+        
+        <div class="player-right">
+            <span class="time-info">
+                <span class="current-time">0:00</span>
+                <span>/</span>
+                <span class="total-time">0:00</span>
+            </span>
+            <div class="volume-control">
+                <button class="volume-btn"></button>
+                <input type="range" class="volume-slider" min="0" max="100" value="50">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
