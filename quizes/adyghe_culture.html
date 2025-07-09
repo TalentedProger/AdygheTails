@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квиз: Культура Адыгов - Свет легенд</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><img src="../images/logo.svg" alt="Логотип проекта" width="180" height="auto" loading="lazy"></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../library.html" class="nav-link">Библиотека</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../proverbs.html" class="nav-link">Пословицы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../songs.html" class="nav-link">Песни</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../legends.html" class="nav-link">Легенды</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../myths.html" class="nav-link">Мифы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../gallery.html" class="nav-link">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../quest.html" class="nav-link active">Квест</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <section class="quiz-container">
+        <div class="quiz-wrapper">
+            <div class="quiz-main" id="quizMain">
+                <!-- Rules Stage -->
+                <div id="rulesStage" class="quiz-stage active">
+                    <h2 class="stage-title">Правила игры</h2>
+                    <div class="rules-content">
+                        <ul class="rules-list">
+                            <li>📖 Внимательно прочитайте каждый вопрос</li>
+                            <li>🎯 Выберите один правильный ответ из предложенных вариантов</li>
+                            <li>⏰ На каждый вопрос отводится неограниченное время</li>
+                            <li>✅ После выбора ответа нажмите кнопку "Далее"</li>
+                            <li>📊 В конце получите результат и мотивационную оценку</li>
+                            <li>🔄 Можете пройти квиз повторно для улучшения результата</li>
+                        </ul>
+                    </div>
+                    <button class="quiz-btn" onclick="startQuestions()">Далее</button>
+                </div>
+
+                <!-- Questions Stage -->
+                <div id="questionsStage" class="quiz-stage">
+                    <div class="progress-bar">
+                        <span id="progressText">Вопрос 1/10</span>
+                    </div>
+                    <h2 class="question-title" id="questionTitle">Вопрос появится здесь</h2>
+                    <div class="answers-container" id="answersContainer">
+                        <!-- Варианты ответов будут добавлены динамически -->
+                    </div>
+                    <button class="quiz-btn" id="nextBtn" onclick="nextQuestion()" disabled>Далее</button>
+                </div>
+
+                <!-- Results Stage -->
+                <div id="resultsStage" class="quiz-stage">
+                    <h2 class="stage-title">Результаты</h2>
+                    <div class="results-content">
+                        <div class="score-display">
+                            <span id="scoreText">Решено верно: 0/10</span>
+                        </div>
+                        <div class="motivation-text" id="motivationText">
+                            <!-- Мотивационная речь будет добавлена динамически -->
+                        </div>
+                    </div>
+                    <div class="results-buttons">
+                        <button class="quiz-btn secondary" onclick="exitQuiz()">Выйти</button>
+                        <button class="quiz-btn primary" onclick="retakeQuiz()">Пройти еще раз</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Quiz Data
+        const quizData = [
+            {
+                question: "Как называется традиционное адыгское женское свадебное или праздничное платье?",
+                answers: [
+                    "Сарафан",
+                    "Кимоно",
+                    "Сае (Сае)",
+                    "Паранджа"
+                ],
+                correct: 2
+            },
+            {
+                question: "Кто из божеств является покровителем леса, диких зверей и охоты?",
+                answers: [
+                    "Амыш (Амыш)",
+                    "Мэзытха (Мэзытхьэ)",
+                    "Хытха (Хытхьэ)",
+                    "Тлепш (Лъэпш)"
+                ],
+                correct: 1
+            },
+            {
+                question: "Какой цвет является основным и наиболее символичным на флаге Республики Адыгея?",
+                answers: [
+                    "Синий",
+                    "Красный",
+                    "Зеленый",
+                    "Белый"
+                ],
+                correct: 2
+            },
+            {
+                question: "Что символизируют 12 звезд на флаге Адыгеи и других флагах черкесов?",
+                answers: [
+                    "12 месяцев года",
+                    "12 основных исторических адыгских (черкесских) племен/субэтносов",
+                    "12 нартских героев",
+                    "12 богов пантеона"
+                ],
+                correct: 1
+            },
+            {
+                question: "Как называется традиционное адыгское социальное собрание с танцами, музыкой и общением, часто проходящее вечером?",
+                answers: [
+                    "Сход",
+                    "Джэгу",
+                    "Той",
+                    "Маджлис"
+                ],
+                correct: 1
+            },
+            {
+                question: "Кто из божеств является божественным кузнецом и покровителем ремесел, связанных с металлом и огнем?",
+                answers: [
+                    "Шибле",
+                    "Амыш",
+                    "Тлепш (Лъэпш)",
+                    "Псыхъуэжь"
+                ],
+                correct: 2
+            },
+            {
+                question: "Как называется традиционный адыгский сыр, который является одним из национальных символов?",
+                answers: [
+                    "Сулугуни",
+                    "Моцарелла",
+                    "Адыгейский сыр",
+                    "Фета"
+                ],
+                correct: 2
+            },
+            {
+                question: "В традиционном адыгском доме, где находилось самое почетное место для гостя?",
+                answers: [
+                    "У очага",
+                    "В женской половине дома",
+                    "В специальной гостевой комнате (ХьэщIэщ)",
+                    "На кухне"
+                ],
+                correct: 2
+            },
+            {
+                question: "Что означает слово \"Тхьэ\" в традиционных адыгских верованиях?",
+                answers: [
+                    "Земля",
+                    "Вода",
+                    "Бог",
+                    "Солнце"
+                ],
+                correct: 2
+            },
+            {
+                question: "Какой герой Нартского эпоса, согласно мифам, добыл огонь для людей, преодолев холод и препятствия?",
+                answers: [
+                    "Уазырмес",
+                    "Саусырыкъуэ",
+                    "Бадыноко",
+                    "Ашамаз"
+                ],
+                correct: 1
+            },
+            {
+                question: "Какое отношение у адыгов к старшим (Тхьэмадэ)?",
+                answers: [
+                    "Нейтральное",
+                    "Пренебрежительное",
+                    "Глубокое уважение и почитание",
+                    "Боязнь"
+                ],
+                correct: 2
+            },
+            {
+                question: "Как называется традиционная адыгская женская головной убор, часто покрывающий волосы, особенно у замужних женщин?",
+                answers: [
+                    "Папаха",
+                    "Кубанка",
+                    "Кошъуай (Къошъуай)",
+                    "Фуражка"
+                ],
+                correct: 2
+            },
+            {
+                question: "Кто в Нартском эпосе является мудрой прародительницей или \"матерью\" многих героев, обладающей магическими способностями?",
+                answers: [
+                    "Дареджан",
+                    "Сатаней-Гуащэ",
+                    "Медея",
+                    "Лейла"
+                ],
+                correct: 1
+            },
+            {
+                question: "Что из перечисленного не является традиционным видом ремесла у адыгов?",
+                answers: [
+                    "Ювелирное дело (обработка серебра)",
+                    "Ткачество и вышивка (золотой нитью)",
+                    "Изготовление керамической посуды на гончарном круге в промышленных масштабах",
+                    "Седельное дело и обработка кожи"
+                ],
+                correct: 2
+            },
+            {
+                question: "Какой символ на флаге Адыгеи, помимо звезд, связан с сельским хозяйством и плодородием?",
+                answers: [
+                    "Стрелы (символ воинской доблести)",
+                    "Круглый щит (символ защиты)",
+                    "Три золотые стрелы",
+                    "Три золотые яблока (символ изобилия и плодородия)"
+                ],
+                correct: 3
+            }
+        ];
+
+
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswer = null;
+
+        function startQuestions() {
+            document.getElementById('rulesStage').classList.remove('active');
+            document.getElementById('questionsStage').classList.add('active');
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const question = quizData[currentQuestion];
+            document.getElementById('progressText').textContent = `Вопрос ${currentQuestion + 1}/${quizData.length}`;
+            document.getElementById('questionTitle').textContent = question.question;
+            
+            const answersContainer = document.getElementById('answersContainer');
+            answersContainer.innerHTML = '';
+            
+            question.answers.forEach((answer, index) => {
+                const answerDiv = document.createElement('div');
+                answerDiv.className = 'answer-option';
+                answerDiv.innerHTML = `
+                    <input type="radio" id="answer${index}" name="answer" value="${index}" onchange="selectAnswer(${index})">
+                    <label for="answer${index}">${answer}</label>
+                `;
+                answersContainer.appendChild(answerDiv);
+            });
+            
+            selectedAnswer = null;
+            document.getElementById('nextBtn').disabled = true;
+        }
+
+        function selectAnswer(index) {
+            selectedAnswer = index;
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        function nextQuestion() {
+            if (selectedAnswer === quizData[currentQuestion].correct) {
+                score++;
+            }
+            
+            currentQuestion++;
+            
+            if (currentQuestion < quizData.length) {
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('questionsStage').classList.remove('active');
+            document.getElementById('resultsStage').classList.add('active');
+            
+            document.getElementById('scoreText').textContent = `Решено верно: ${score}/${quizData.length}`;
+            
+            let motivationText = '';
+            const percentage = (score / quizData.length) * 100;
+            
+            if (percentage >= 80) {
+                motivationText = "🎉 Превосходно! Вы отлично знаете адыгскую культуру! Ваши знания впечатляют. Продолжайте изучать культурное наследие!";
+            } else if (percentage >= 60) {
+                motivationText = "👏 Хорошо! У вас солидная база знаний о адыгской культуре. Еще немного изучения, и вы станете настоящим экспертом!";
+            } else if (percentage >= 40) {
+                motivationText = "📖 Неплохо! Базовые знания у вас есть, но есть куда стремиться. Изучайте больше о богатом наследии славян!";
+            } else {
+                motivationText = "🌱 Начало положено! Адыгская культура очень богата и интересна. Продолжайте изучение - каждый новый факт приблизит вас к пониманию!";
+            }
+            
+            document.getElementById('motivationText').textContent = motivationText;
+        }
+
+        function exitQuiz() {
+            window.location.href = '../quest.html';
+        }
+
+        function retakeQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswer = null;
+            
+            document.getElementById('resultsStage').classList.remove('active');
+            document.getElementById('rulesStage').classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квиз: Мир Адыгов - Свет легенд</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html"><img src="../images/logo.svg" alt="Логотип проекта" width="180" height="auto" loading="lazy"></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../library.html" class="nav-link">Библиотека</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../proverbs.html" class="nav-link">Пословицы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../songs.html" class="nav-link">Песни</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../legends.html" class="nav-link">Легенды</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../myths.html" class="nav-link">Мифы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../gallery.html" class="nav-link">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../quest.html" class="nav-link active">Квест</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <section class="quiz-container">
+        <div class="quiz-wrapper">
+            <div class="quiz-main" id="quizMain">
+                <!-- Rules Stage -->
+                <div id="rulesStage" class="quiz-stage active">
+                    <h2 class="stage-title">Правила игры</h2>
+                    <div class="rules-content">
+                        <ul class="rules-list">
+                            <li>📖 Внимательно прочитайте каждый вопрос</li>
+                            <li>🎯 Выберите один правильный ответ из предложенных вариантов</li>
+                            <li>⏰ На каждый вопрос отводится неограниченное время</li>
+                            <li>✅ После выбора ответа нажмите кнопку "Далее"</li>
+                            <li>📊 В конце получите результат и мотивационную оценку</li>
+                            <li>🔄 Можете пройти квиз повторно для улучшения результата</li>
+                        </ul>
+                    </div>
+                    <button class="quiz-btn" onclick="startQuestions()">Далее</button>
+                </div>
+
+                <!-- Questions Stage -->
+                <div id="questionsStage" class="quiz-stage">
+                    <div class="progress-bar">
+                        <span id="progressText">Вопрос 1/10</span>
+                    </div>
+                    <h2 class="question-title" id="questionTitle">Вопрос появится здесь</h2>
+                    <div class="answers-container" id="answersContainer">
+                        <!-- Варианты ответов будут добавлены динамически -->
+                    </div>
+                    <button class="quiz-btn" id="nextBtn" onclick="nextQuestion()" disabled>Далее</button>
+                </div>
+
+                <!-- Results Stage -->
+                <div id="resultsStage" class="quiz-stage">
+                    <h2 class="stage-title">Результаты</h2>
+                    <div class="results-content">
+                        <div class="score-display">
+                            <span id="scoreText">Решено верно: 0/10</span>
+                        </div>
+                        <div class="motivation-text" id="motivationText">
+                            <!-- Мотивационная речь будет добавлена динамически -->
+                        </div>
+                    </div>
+                    <div class="results-buttons">
+                        <button class="quiz-btn secondary" onclick="exitQuiz()">Выйти</button>
+                        <button class="quiz-btn primary" onclick="retakeQuiz()">Пройти еще раз</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Quiz Data
+const quizData = [
+    {
+        question: "Как называется основной цикл героических сказаний адыгского народа?",
+        answers: [
+            "Калевала",
+            "Махабхарата",
+            "Нартский эпос",
+            "Эпос о Гильгамеше"
+        ],
+        correct: 2
+    },
+    {
+        question: "Кто из нартских героев, согласно мифу, родился из камня, опаленного молнией?",
+        answers: [
+            "Батраз",
+            "Саусырыкъуэ",
+            "Ашамаз",
+            "Уазырмес"
+        ],
+        correct: 1
+    },
+    {
+        question: "Как называется традиционный кодекс этики, чести и обычаев адыгов?",
+        answers: [
+            "Шариат",
+            "Адат",
+            "Адыгэ Хабзэ",
+            "Яса"
+        ],
+        correct: 2
+    },
+    {
+        question: "Кто является верховным, единым и непостижимым Богом-Творцом в традиционных адыгских верованиях?",
+        answers: [
+            "Шибле (Шыблэ)",
+            "Мэзытха (Мэзытхьэ)",
+            "Тха (Тхьэ)",
+            "Сатаней-Гуащэ"
+        ],
+        correct: 2
+    },
+    {
+        question: "Какой обычай гостеприимства является одним из самых священных и важных для адыгов?",
+        answers: [
+            "Куначество",
+            "Побратимство",
+            "ХьэщIапIэ",
+            "Аталычество"
+        ],
+        correct: 2
+    },
+    {
+        question: "Как называется традиционное мужское верхнее одеяние с газырями (патронташем), являющееся символом адыгской культуры?",
+        answers: [
+            "Кафтан",
+            "Черкеска (Цей)",
+            "Бешмет",
+            "Бурка"
+        ],
+        correct: 1
+    },
+    {
+        question: "Какой музыкальный инструмент является традиционным для адыгов и других народов Кавказа (род гармони/аккордеона)?",
+        answers: [
+            "Балалайка",
+            "Пандури",
+            "Пшынэ",
+            "Волынка"
+        ],
+        correct: 2
+    },
+    {
+        question: "Кто из нартских героев известен своей волшебной свирелью, способной влиять на природу и чувства?",
+        answers: [
+            "Саусырыкъуэ",
+            "Батраз",
+            "Ашамэз",
+            "Уазырмес"
+        ],
+        correct: 2
+    },
+    {
+        question: "Как называется традиционное собрание старейшин или совет, где решались важные вопросы в адыгском обществе и нартском эпосе?",
+        answers: [
+            "Дума",
+            "Вече",
+            "Ныхас /Нысэбжэ",
+            "Меджлис"
+        ],
+        correct: 2
+    },
+    {
+        question: "Какие существа, часто огромные и злобные, являются основными противниками нартов в эпосе, олицетворяя хаос и дикость?",
+        answers: [
+            "Драконы",
+            "Иныжи",
+            "Гоблины",
+            "Циклопы"
+        ],
+        correct: 1
+    },
+    {
+        question: "Какая гора имеет особое символическое значение для адыгов и часто упоминается в мифах?",
+        answers: [
+            "Казбек",
+            "Эльбрус",
+            "Арарат",
+            "Машук"
+        ],
+        correct: 1
+    },
+    {
+        question: "Что символизирует нартская очажная цепь (Нарты къоджэ чэйн)?",
+        answers: [
+            "Воинскую доблесть",
+            "Богатство",
+            "Крепость дома, рода и связь поколений",
+            "Путь на небо"
+        ],
+        correct: 2
+    },
+    {
+        question: "Кто из богов в адыгских верованиях является покровителем грозы, молнии и небесного огня?",
+        answers: [
+            "Тха",
+            "Шыблэ",
+            "Тлепш",
+            "Хытха"
+        ],
+        correct: 1
+    },
+    {
+        question: "Какое традиционное женское украшение, часто массивное и из серебра, носилось на голове или у висков?",
+        answers: [
+            "Диадема",
+            "Серьги-подвески",
+            "Кольцо",
+            "Ожерелье"
+        ],
+        correct: 1
+    },
+    {
+        question: "Согласно мифам, в кого или во что превратились нарты, когда их эпоха подошла к концу?",
+        answers: [
+            "Улетели на другие планеты",
+            "Превратились в скалы, ушли под землю или в море",
+            "Стали обычными людьми",
+            "Растворились в воздухе"
+        ],
+        correct: 1
+    }
+];
+
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswer = null;
+
+        function startQuestions() {
+            document.getElementById('rulesStage').classList.remove('active');
+            document.getElementById('questionsStage').classList.add('active');
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const question = quizData[currentQuestion];
+            document.getElementById('progressText').textContent = `Вопрос ${currentQuestion + 1}/${quizData.length}`;
+            document.getElementById('questionTitle').textContent = question.question;
+            
+            const answersContainer = document.getElementById('answersContainer');
+            answersContainer.innerHTML = '';
+            
+            question.answers.forEach((answer, index) => {
+                const answerDiv = document.createElement('div');
+                answerDiv.className = 'answer-option';
+                answerDiv.innerHTML = `
+                    <input type="radio" id="answer${index}" name="answer" value="${index}" onchange="selectAnswer(${index})">
+                    <label for="answer${index}">${answer}</label>
+                `;
+                answersContainer.appendChild(answerDiv);
+            });
+            
+            selectedAnswer = null;
+            document.getElementById('nextBtn').disabled = true;
+        }
+
+        function selectAnswer(index) {
+            selectedAnswer = index;
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        function nextQuestion() {
+            if (selectedAnswer === quizData[currentQuestion].correct) {
+                score++;
+            }
+            
+            currentQuestion++;
+            
+            if (currentQuestion < quizData.length) {
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('questionsStage').classList.remove('active');
+            document.getElementById('resultsStage').classList.add('active');
+            
+            document.getElementById('scoreText').textContent = `Решено верно: ${score}/${quizData.length}`;
+            
+            let motivationText = '';
+            const percentage = (score / quizData.length) * 100;
+            
+            if (percentage >= 80) {
+                motivationText = "🎉 Превосходно! Вы отлично знаете адыгскую культуру! Ваши знания впечатляют. Продолжайте изучать культурное наследие!";
+            } else if (percentage >= 60) {
+                motivationText = "👏 Хорошо! У вас солидная база знаний о адыгской культуре. Еще немного изучения, и вы станете настоящим экспертом!";
+            } else if (percentage >= 40) {
+                motivationText = "📖 Неплохо! Базовые знания у вас есть, но есть куда стремиться. Изучайте больше о богатом наследии славян!";
+            } else {
+                motivationText = "🌱 Начало положено! Адыгская культура очень богата и интересна. Продолжайте изучение - каждый новый факт приблизит вас к пониманию!";
+            }
+            
+            document.getElementById('motivationText').textContent = motivationText;
+        }
+
+        function exitQuiz() {
+            window.location.href = '../quest.html';
+        }
+
+        function retakeQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswer = null;
+            
+            document.getElementById('resultsStage').classList.remove('active');
+            document.getElementById('rulesStage').classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
