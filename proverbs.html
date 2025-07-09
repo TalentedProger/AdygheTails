@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="page-proverbs">
     <!-- Navigation Menu -->
     <nav class="navbar">
         <div class="nav-container">
@@ -404,7 +404,7 @@
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                768: {
+                850: {
                     slidesPerView: 3,
                     spaceBetween: 40,
                 }
@@ -419,23 +419,8 @@
             },
         });
 
-        // Copy function
-        // function copyProverb(text) {
-        //     navigator.clipboard.writeText(text).then(() => {
-        //         // Show success animation
-        //         const button = event.target;
-        //         const originalText = button.innerHTML;
-        //         button.innerHTML = '✅ Скопировано!';
-        //         button.style.background = 'var(--primary-green)';
-                
-        //         setTimeout(() => {
-        //             button.innerHTML = originalText;
-        //             button.style.background = '';
-        //         }, 2000);
-        //     }).catch(err => {
-        //         console.error('Ошибка копирования: ', err);
-        //     });
-        // }
+
+
 
         function copyProverb(event, text) {
     navigator.clipboard.writeText(text).then(() => {

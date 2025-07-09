@@ -11,7 +11,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body class="page-quizes">
     <!-- Navigation Menu -->
     <nav class="navbar">
         <div class="nav-container">
@@ -112,11 +112,11 @@
 
             <div class="quiz-swiper">
                 <div class="swiper-wrapper">
-                    <!-- Quiz 1: Славянская культура -->
+                    <!-- Quiz 1: Мир Адыгов -->
                     <div class="swiper-slide">
                         <div class="quiz-card">
-                            <h3 class="quiz-title">Славянская культура</h3>
-                            <p class="quiz-description">Проверьте свои знания о традициях, обычаях и мифологии славянских народов</p>
+                            <h3 class="quiz-title">Мир Адыгов</h3>
+                            <p class="quiz-description">Проверьте свои знания о традициях, обычаях и мифологии черкесских народов</p>
                             <div class="quiz-info">
                                 <div class="quiz-stat">
                                     <span class="quiz-icon">❔</span>
@@ -129,35 +129,14 @@
                                     <span class="quiz-value">Легкий</span>
                                 </div>
                             </div>
-                            <button class="quiz-play-btn" onclick="startQuiz('slavic')">Играть!</button>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_world.html')">Играть!</button>
                         </div>
                     </div>
 
-                    <!-- Quiz 2: Народные песни -->
+                     <!-- Quiz 2: Культура Адыгов -->
                     <div class="swiper-slide">
                         <div class="quiz-card">
-                            <h3 class="quiz-title">Народные песни</h3>
-                            <p class="quiz-description">Узнайте, насколько хорошо вы знаете музыкальное наследие разных народов</p>
-                            <div class="quiz-info">
-                                <div class="quiz-stat">
-                                    <span class="quiz-icon">❔</span>
-                                    <span class="quiz-label">Вопросов:</span>
-                                    <span class="quiz-value">12</span>
-                                </div>
-                                <div class="quiz-stat">
-                                    <span class="quiz-icon">🟡</span>
-                                    <span class="quiz-label">Уровень:</span>
-                                    <span class="quiz-value">Средний</span>
-                                </div>
-                            </div>
-                            <button class="quiz-play-btn" onclick="startQuiz('songs')">Играть!</button>
-                        </div>
-                    </div>
-
-                    <!-- Quiz 3: Мифология мира -->
-                    <div class="swiper-slide">
-                        <div class="quiz-card">
-                            <h3 class="quiz-title">Мифология мира</h3>
+                            <h3 class="quiz-title">Культура Адыгов</h3>
                             <p class="quiz-description">Сложные вопросы о мифах и легендах различных культур планеты</p>
                             <div class="quiz-info">
                                 <div class="quiz-stat">
@@ -171,20 +150,19 @@
                                     <span class="quiz-value">Тяжелый</span>
                                 </div>
                             </div>
-                            <button class="quiz-play-btn" onclick="startQuiz('mythology')">Играть!</button>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_culture.html')">Играть!</button>
                         </div>
                     </div>
 
- 
-                    <div class="swiper-slide">
+                     <div class="swiper-slide">
                         <div class="quiz-card">
-                            <h3 class="quiz-title">Пословицы и поговорки</h3>
-                            <p class="quiz-description">Проверьте знание народной мудрости и крылатых выражений</p>
+                            <h3 class="quiz-title">Мир Адыгов</h3>
+                            <p class="quiz-description">Проверьте свои знания о традициях, обычаях и мифологии черкесских народов</p>
                             <div class="quiz-info">
                                 <div class="quiz-stat">
                                     <span class="quiz-icon">❔</span>
                                     <span class="quiz-label">Вопросов:</span>
-                                    <span class="quiz-value">8</span>
+                                    <span class="quiz-value">10</span>
                                 </div>
                                 <div class="quiz-stat">
                                     <span class="quiz-icon">🟢</span>
@@ -192,41 +170,20 @@
                                     <span class="quiz-value">Легкий</span>
                                 </div>
                             </div>
-                            <button class="quiz-play-btn" onclick="startQuiz('proverbs')">Играть!</button>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_world.html')">Играть!</button>
                         </div>
                     </div>
 
-
+                     <!-- Quiz 2: Культура Адыгов -->
                     <div class="swiper-slide">
                         <div class="quiz-card">
-                            <h3 class="quiz-title">Искусство и галерея</h3>
-                            <p class="quiz-description">Вопросы о художниках, картинах и культурном наследии в искусстве</p>
+                            <h3 class="quiz-title">Культура Адыгов</h3>
+                            <p class="quiz-description">Сложные вопросы о мифах и легендах различных культур планеты</p>
                             <div class="quiz-info">
                                 <div class="quiz-stat">
                                     <span class="quiz-icon">❔</span>
                                     <span class="quiz-label">Вопросов:</span>
-                                    <span class="quiz-value">11</span>
-                                </div>
-                                <div class="quiz-stat">
-                                    <span class="quiz-icon">🟡</span>
-                                    <span class="quiz-label">Уровень:</span>
-                                    <span class="quiz-value">Средний</span>
-                                </div>
-                            </div>
-                            <button class="quiz-play-btn" onclick="startQuiz('art')">Играть!</button>
-                        </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                        <div class="quiz-card">
-                            <h3 class="quiz-title">Легенды народов</h3>
-                            <p class="quiz-description">Сложные вопросы о героических сказаниях и народных легендах</p>
-                            <div class="quiz-info">
-                                <div class="quiz-stat">
-                                    <span class="quiz-icon">❔</span>
-                                    <span class="quiz-label">Вопросов:</span>
-                                    <span class="quiz-value">13</span>
+                                    <span class="quiz-value">15</span>
                                 </div>
                                 <div class="quiz-stat">
                                     <span class="quiz-icon">🔴</span>
@@ -234,10 +191,97 @@
                                     <span class="quiz-value">Тяжелый</span>
                                 </div>
                             </div>
-                            <button class="quiz-play-btn" onclick="startQuiz('./legends')">Играть!</button>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_culture.html')">Играть!</button>
                         </div>
                     </div>
+
+                     <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Мир Адыгов</h3>
+                            <p class="quiz-description">Проверьте свои знания о традициях, обычаях и мифологии черкесских народов</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">10</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🟢</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Легкий</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_world.html')">Играть!</button>
+                        </div>
+                    </div>
+
+                     <!-- Quiz 2: Культура Адыгов -->
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Культура Адыгов</h3>
+                            <p class="quiz-description">Сложные вопросы о мифах и легендах различных культур планеты</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">15</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🔴</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Тяжелый</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_culture.html')">Играть!</button>
+                        </div>
+                    </div>
+
+                     <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Мир Адыгов</h3>
+                            <p class="quiz-description">Проверьте свои знания о традициях, обычаях и мифологии черкесских народов</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">10</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🟢</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Легкий</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_world.html')">Играть!</button>
+                        </div>
+                    </div>
+
+                     <!-- Quiz 2: Культура Адыгов -->
+                    <div class="swiper-slide">
+                        <div class="quiz-card">
+                            <h3 class="quiz-title">Культура Адыгов</h3>
+                            <p class="quiz-description">Сложные вопросы о мифах и легендах различных культур планеты</p>
+                            <div class="quiz-info">
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">❔</span>
+                                    <span class="quiz-label">Вопросов:</span>
+                                    <span class="quiz-value">15</span>
+                                </div>
+                                <div class="quiz-stat">
+                                    <span class="quiz-icon">🔴</span>
+                                    <span class="quiz-label">Уровень:</span>
+                                    <span class="quiz-value">Тяжелый</span>
+                                </div>
+                            </div>
+                            <button class="quiz-play-btn" onclick="startQuiz('../quizes/adyghe_culture.html')">Играть!</button>
+                        </div>
+                    </div>
+
+
+
                 </div>
+
+                
 
                 <!-- Navigation buttons -->
                 <div class="swiper-button-next"></div>
@@ -310,6 +354,46 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script>
+
+        window.addEventListener('load', () => {
+        swiper.update();
+        swiper.slideToLoop(0, 0); // чтобы встать в центр
+        });
+        const swiper = new Swiper('.quiz-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                }
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+
+        
+
         // Instructions Modal Functions
         function openInstructionsModal() {
             document.getElementById('instructionsModal').style.display = 'block';
@@ -328,44 +412,55 @@
         }
 
         // Start Quiz Function
-        function startQuiz(quizType) {
-            window.location.href = `quiz-${quizType}.html`;
+
+        // function startQuiz(quizType) {
+        //     window.location.href = `quiz${quizType}.html`;
+        // }
+
+        function startQuiz(path) {
+        window.location.href = path;
         }
 
         // Initialize Quiz Swiper
-        const quizSwiper = new Swiper('.quiz-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                }
-            },
-            effect: 'coverflow',
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            },
-        });
+        // const quizSwiper = new Swiper('.quiz-swiper', {
+        //     slidesPerView: 1,
+        //     spaceBetween: 30,
+        //     centeredSlides: true,
+        //     loop: true,
+        //     autoplay: {
+        //         delay: 4000,
+        //         disableOnInteraction: false,
+        //     },
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //         dynamicBullets: true,
+        //     },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     },
+        //     breakpoints: {
+        //         1024: {
+        //             slidesPerView: 3,
+        //             spaceBetween: 30,
+        //         }
+        //     },
+        //     effect: 'coverflow',
+        //     coverflowEffect: {
+        //         rotate: 0,
+        //         stretch: 0,
+        //         depth: 100,
+        //         modifier: 2,
+        //         slideShadows: true,
+        //     },
+        // });
+
+        // window.addEventListener('load', () => {
+        // swiper.update();
+        // swiper.slideToLoop(0, 0); // Перейти к первому слайду без анимации
+        // });
+
     </script>
 </body>
 

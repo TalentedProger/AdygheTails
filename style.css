@@ -551,13 +551,13 @@ body {
 
     .content-card {
         padding: 20px;
-        max-width: 90%;
+        max-width: 70%;
         margin: 0 auto;
     }
 
     .content-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 40px;
     }
 }
 
@@ -924,6 +924,14 @@ margin-bottom: 100px;
     align-items: center;
     gap: 25px;
 }
+@media screen and (max-width:460px) {
+    .volume-control {
+        display: none;
+}
+.time-info {
+    color: var(--primary-yellow);
+}
+}
 
 .volume-btn {
     background: url('./images/icons/volume.svg');
@@ -976,7 +984,8 @@ margin-bottom: 100px;
 @media screen and (max-width: 900px) {
 
     .section-title {
-        margin-block: 30px;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
     .music-section {
@@ -995,12 +1004,12 @@ margin-bottom: 100px;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
 
     .artist-photo {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
     }
 
     .song-item {
@@ -1036,7 +1045,18 @@ margin-bottom: 100px;
         width: 50px;
         height: 50px;
     }
+
+    .hero-buttons {
+        justify-content: center;
+    }
 }
+
+
+.proverbs-section {
+    padding: 80px 0 120px;
+    background-color: var(--black);
+}
+
 
 @media screen and (max-width: 480px) {
 
@@ -1052,13 +1072,17 @@ margin-bottom: 100px;
         font-size: 2rem;
     }
 
+    .hero-description {
+        text-align: start;
+    }
+
     /* .hero-artist {
         order: -1;
     } */
 
     .artist-photo {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 
     .song-item {
@@ -1081,6 +1105,14 @@ margin-bottom: 100px;
     .hero-title {
         font-size: 1.6rem;
     }
+
+    .proverbs-section .swiper-button-next .swiper-button-prev {
+        display: none;
+    }
+
+    .proverbs-section {
+        padding: 40px 0 60px;
+    }
 }
 
 /* Proverbs Page Styles */
@@ -1090,10 +1122,6 @@ margin-bottom: 100px;
     color: var(--white);
 }
 
-.proverbs-section {
-    padding: 80px 0 120px;
-    background-color: var(--black);
-}
 
 .proverbs-swiper {
     position: relative;
@@ -1167,6 +1195,44 @@ margin-bottom: 100px;
     position: relative;
     z-index: 2;
     animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+@media screen and (max-width: 530px) {
+     .page-proverbs .swiper-button-next,
+    .page-proverbs .swiper-button-prev,
+    .page-proverbs .swiper-pagination {
+        display: none !important;
+    }
+
+    .proverb-card {
+        max-width: 75%;
+        min-height: 250px;
+        margin: 0 auto;
+    }
+
+    .proverb-card {
+        padding: 30px 20px;
+        min-height: 300px;
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .page-myths .swiper-button-next,
+    .page-myths .swiper-button-prev {
+        display: none !important;
+    }
+
+    .page-quizes .swiper-button-next,
+    .page-quizes .swiper-button-prev{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .page-gallery .swiper-button-next,
+    .page-gallery .swiper-button-prev{
+        display: none !important;
+    }
 }
 
 .copy-btn {
@@ -1269,7 +1335,9 @@ margin-bottom: 100px;
 @media screen and (max-width: 768px) {
     .proverb-card {
         padding: 30px 20px;
-        min-height: 250px;
+        min-height: 300px;
+        max-width: 75%;
+        margin: 0 auto;
     }
 
     .proverb-original {
@@ -1298,6 +1366,33 @@ margin-bottom: 100px;
     .swiper-button-prev::after {
         font-size: 14px;
     }
+
+
+    .content {
+    /* padding: 60px 20px; */
+    background: none;
+    background-color: black;
+    /* background: url('./images/Flag_of_Adygea.svg'); */
+    /* background: url('./images/main_background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    }
+
+    .content-card {
+        padding: 20px;
+        /* max-width: 90%; */
+        min-width: 300px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        background-color: var(--primary-yellow);
+        background-color: #E8B10066;
+        /* box-shadow: rgba(232,177,0,0.3) 0px 8px 6px 0px, rgba(232,177,0, 0.15) 0px 6px 8px 4px; */
+        box-shadow: rgba(83, 111, 1, 0.32) 0px 6px 6px 0px,
+            rgba(83, 111, 1, 0.42) 0px 4px 18px 0px;
+        border: none;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1307,7 +1402,8 @@ margin-bottom: 100px;
 
     .proverb-card {
         padding: 25px 15px;
-        min-height: 220px;
+        min-height: 280px;
+        min-width: 260px;
     }
 
     .proverb-original {
@@ -1961,7 +2057,7 @@ margin-bottom: 100px;
 }
 
 .quiz-swiper .swiper-pagination {
-    bottom: 10px;
+    bottom: 0px;
 }
 
 .quiz-swiper .swiper-pagination-bullet {
@@ -1996,11 +2092,11 @@ margin-bottom: 100px;
 
 /* Responsive Design for Quest */
 @media screen and (max-width: 768px) {
-    .hero-buttons {
+    /* .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-    }
+    } */
 
     .hero-btn {
         min-width: 200px;
@@ -2065,6 +2161,13 @@ margin-bottom: 100px;
 }
 
 @media screen and (max-width: 480px) {
+
+     .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
     .modal-content {
         margin: 5% auto;
         padding: 20px;
@@ -2104,6 +2207,33 @@ margin-bottom: 100px;
     .quiz-play-btn {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+    .instruction-number {
+    min-width:min-content;
+    background: var(--primary-yellow);
+    color: var(--black);
+    padding: 6px 6px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.6rem;
+    /* min-width: 25px; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    }
+
+    .instruction-image {
+        display: none;
+        width: 30px;
+        height: 30px;
+    }
+    .instruction-text {
+        font-size: 0.9rem;
+    }
+
+    .modal-btn {
+        padding: 10px 20px;
     }
 }
 
@@ -2654,7 +2784,7 @@ margin-bottom: 100px;
     }
 
     .social-links {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 8px;
     }
@@ -2792,12 +2922,12 @@ margin-bottom: 100px;
 }
 
 .answer-option label {
+    position: relative;
     display: block;
     padding: 20px;
     color: var(--white);
     font-size: 1.2rem;
     cursor: pointer;
-    position: relative;
     transition: all 0.3s ease;
 }
 
@@ -2825,14 +2955,18 @@ margin-bottom: 100px;
 }
 
 .answer-option input[type="radio"]:checked + label::after {
-    content: '✓';
+    /* content: '✓'; */
+    content: "";
     position: absolute;
-    left: 25px;
+    left: 0;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
+    transform: translate(50%,-50%);
     color: var(--black);
     font-weight: bold;
     font-size: 0.9rem;
+    /* width: 10px;
+    height: 10px; */
 }
 
 .quiz-btn {
@@ -3006,6 +3140,7 @@ margin-bottom: 100px;
     text-align: center;
 }
 
+
 .myth-description {
     color: var(--white);
     font-size: 0.95rem;
@@ -3058,6 +3193,13 @@ margin-bottom: 100px;
     height: 500px;
     min-width: 400px;   
 }
+
+@media screen and (max-width:1200px) {
+    .myth-card {
+    height: 460px;
+    min-width: 360px;
+}
+}
 /* Responsive Design for Myths */
 @media screen and (max-width: 768px) {
     /* .myth-card {
@@ -3093,7 +3235,7 @@ margin-bottom: 100px;
 @media screen and (max-width: 560px) {
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     .myths-swiper {
         padding: 30px 0;
@@ -3101,7 +3243,6 @@ margin-bottom: 100px;
 
     .myth-card {
         min-width: 320px;
-        height: auto;
         width: auto;
     }
 
@@ -3382,4 +3523,12 @@ color: var(--primary-yellow);
 
 .custom-nav-start.nav-menu {
     justify-content: start;
+}
+
+
+body.menu-open .swiper-button-next,
+body.menu-open .swiper-button-prev,
+body.menu-open .swiper-pagination {
+  opacity: 0;
+  pointer-events: none;
 }

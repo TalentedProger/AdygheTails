@@ -15,8 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         document.body.style.overflow = '';
       }
-    });
 
+      const menuIsOpen = navMenu.classList.contains('active');
+
+      document.body.style.overflow = menuIsOpen ? 'hidden' : '';
+      document.body.classList.toggle('menu-open', menuIsOpen); // 👈 добавляем/удаляем класс на <body>
+    });
+  
     // Закрываем меню и возвращаем прокрутку при клике на ссылку
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -25,25 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.remove('active');
         document.body.style.overflow = ''; // вернуть прокрутку
       });
-    });
-    // const mobileMenu = document.getElementById('mobile-menu');
-    // const navMenu = document.querySelector('.nav-menu');
-    
-    // if (mobileMenu && navMenu) {
-    //     mobileMenu.addEventListener('click', function() {
-    //         mobileMenu.classList.toggle('active');
-    //         navMenu.classList.toggle('active');
-    //     });
-
-    //     // Close mobile menu when clicking on a link
-    //     const navLinks = document.querySelectorAll('.nav-link');
-    //     navLinks.forEach(link => {
-    //         link.addEventListener('click', function() {
-    //             mobileMenu.classList.remove('active');
-    //             navMenu.classList.remove('active');
-    //         });
-    //     });
-    }
+    });}
 
     // Video handling with multiple fallbacks
     const video = document.getElementById('background-video');
@@ -489,9 +476,6 @@ shuffleBtn.addEventListener('click', () => {
   loadSong(randomIndex);
   playSong();
 });
-
-
-
 
 
 let isRepeatMode = false;
